@@ -69,6 +69,7 @@
 3. Для тренировки можешь попробовать записать те темы в Typora, которых пока нет еще в моем конспекте.
 
 **Решим проблему подготовки к экзаменам раз и навсегда! Это лишь маленький шаг в большое будущее!**
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QfeiXj6xYRo?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
