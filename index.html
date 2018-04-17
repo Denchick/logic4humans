@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>ЭТО МАТ.ЛОГИКА!</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}#write, body { height: auto; }
+<title>README.md</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}#write, body { height: auto; }
 #write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write ol, #write p, #write ul { position: relative; }
 #write, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write, pre { white-space: pre-wrap; }
 .CodeMirror, .md-fences, table { text-align: left; }
 .md-reset, a:active, a:hover { outline: 0px; }
 .md-reset, .md-toc-item a { text-decoration: none; }
@@ -13,7 +14,9 @@
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 .in-text-selection, ::selection { background: rgb(181, 214, 252); text-shadow: none; }
-#write { margin: 0px auto; word-break: normal; word-wrap: break-word; padding-bottom: 70px; white-space: pre-wrap; overflow-x: visible; }
+#write { margin: 0px auto; word-break: normal; word-wrap: break-word; padding-bottom: 70px; overflow-x: visible; }
+.first-line-indent #write p .md-line { text-indent: 0px; }
+.first-line-indent #write li, .first-line-indent #write p, .first-line-indent #write p .md-line:first-child { text-indent: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
@@ -21,7 +24,6 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
-.typora-export #write { margin: 0px auto; }
 #write > blockquote:first-child, #write > div:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > table:first-child, #write > ul:first-child { margin-top: 30px; }
 #write li > table:first-child { margin-top: -20px; }
 img { max-width: 100%; vertical-align: middle; }
@@ -35,7 +37,6 @@ h4 { font-size: 1.4rem; }
 h5 { font-size: 1.2rem; }
 h6 { font-size: 1rem; }
 p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
-.typora-export p { white-space: normal; }
 .mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0px; -webkit-margin-after: 0px; }
 .hidden { display: none; }
 .md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
@@ -54,15 +55,14 @@ table.md-table td { min-width: 80px; }
 .CodeMirror pre { padding: 0px 4px; }
 .CodeMirror-lines { padding: 0px; }
 div.hr:focus { cursor: none; }
-pre { white-space: pre-wrap; }
 .md-fences { font-size: 0.9rem; display: block; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
 .md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
 .md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
 .md-fences.mock-cm { white-space: pre-wrap; }
 .show-fences-line-number .md-fences { padding-left: 0px; }
 .show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
-.footnotes + .footnotes { margin-top: -1em; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; vertical-align: top; background: 0px 0px; text-shadow: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; }
 .md-toc-inner, a img, img a { cursor: pointer; }
 li div { padding-top: 0px; }
@@ -74,6 +74,7 @@ blockquote > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: nowrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
   p { orphans: 4; }
@@ -117,11 +118,9 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .footnote-line a:not(.reversefootnote) { color: inherit; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
-.md-tag { opacity: 0.5; }
 code, pre, tt { font-family: var(--monospace); }
 .md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
 code { text-align: left; }
-h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
 a.md-print-anchor { border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .md-inline-math .MathJax_SVG .noError { display: none !important; }
 .mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0px; position: relative; min-width: 100%; width: auto; display: block !important; }
@@ -130,6 +129,7 @@ a.md-print-anchor { border-width: initial !important; border-style: none !import
 .MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
 .MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; min-width: 0px; border: 0px; padding: 0px; margin: 0px; }
 .MathJax_SVG * { transition: none; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg, [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
@@ -201,7 +201,7 @@ table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
 #write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
 #write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
 #write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; color: inherit; }
+.md-image > .md-meta { border-radius: 3px; font-family: Consolas, "Liberation Mono", Courier, monospace; padding: 2px 0px 0px 4px; font-size: 0.9em; color: inherit; }
 .md-tag { color: inherit; }
 .md-toc { margin-top: 20px; padding-bottom: 20px; }
 .sidebar-tabs { border-bottom: none; }
@@ -219,10 +219,10 @@ header, .context-menu, .megamenu-content, footer { font-family: "Segoe UI", Aria
 
 
 
-
+ .typora-export p {white-space: normal;} 
 </style>
 </head>
-<body class='typora-export' >
-<div  id='write'  class = 'is-node show-fences-line-number'><h1><a name='header-n0' class='md-header-anchor '></a>logic4human</h1><ul><li><p><a href='chapter1.html'>Глава 1. Высказывания</a></p></li><li><p><a href='chapter2.html'>Глава 2. Логика первого порядка</a> </p><p>(я дискретку сдавал, поэтому прошлая лекция отсутствует)</p></li><li><p><a href='chapter3.html'>Глава 3. Метод резолюций</a></p></li></ul><h1><a name='header-n185' class='md-header-anchor '></a>Read me!</h1><p>Какая проблема возникает из раза в раз во время сессии? Правильно! </p><blockquote><p>&quot;<strong>А где же взять нормальный конспект?</strong>&quot; </p></blockquote><p>Так давайте сделаем его сами!</p><p>Все знают, что с хорошим конспектом <strong>шансы сдать на &quot;5&quot;</strong> растут в геометрической прогрессии. Но есть ряд проблем:</p><ul><li>У тебя почерк как у курицы;</li><li>Пишешь как черепашка и не успеваешь ничего записывать;</li><li>Любишь поспать и хочешь редко ходить в универ;</li><li>Есть более важные вещи, чем &quot;эта бесполезная лекция&quot;;</li></ul><p><del>Тогда мы идем к вам!</del> Если хотя бы что-то из этого про тебя, то у меня к тебе есть предложение. Давай вести этот конспект вместе! Ну, например, по очереди! Что мы в итоге получим:</p><ol start='' ><li>Нормально оформленный по всем канонам конспект.</li><li>Легкую подготовку к экзамену и <strong>коллоквиуму</strong>.</li><li>Не надо будет думать&quot;где чего почитать чтобы сдать&quot;.</li><li>Не нужно портить тетради и исписывать ручку.</li><li>Скорость набора на компьютере намного выше, чем скорость письма в тетрадочке. Тем самым, тебе удастся записать даже больше, чем мог бы раньше!</li><li>Если прокачать свой скилл на этом предмете, то можно попробовать замутить что-то подобное по другим предметам.</li></ol><h2><a name='header-n52' class='md-header-anchor '></a>Как это работает</h2><p>Сам конспект я пишу оффлайн в специальной программе - <a href='typora.io'>typora</a>. Это супер-мега крутой и мощный <a href='https://ru.wikipedia.org/wiki/Markdown'>markdown</a> редактор. Он настолько крут, что там можно настраивать оформление страницы(темы), экспортировать в html и pdf, вставлять картинки, рисовать графики и диаграммы, строить автоматически оглавление и.... ПИСАТЬ МАТЕМАТИЧЕСКИЕ ФОРМУЛЫ. Да, там есть <a href='https://ru.wikipedia.org/wiki/TeX'>Tex</a>. В общем-то, у typora крутая документация на сайте, так что с ней можно ознакомиться. </p><p>Собственно, у меня есть репозиторий на <a href='https://github.com/Denchick/logic4humans'>github</a>, а этот сайтик висит на GitHub pages. В репозиторий  можно делать пул-реквесты. Именно будет организовано взаимодействие.</p><h2><a name='header-n57' class='md-header-anchor '></a>Преимущества typora перед docs</h2><ul><li>Единый стиль оформления конспекта.</li><li>Никаких лишних кнопок - ничего не отвлекает.</li><li>Если ты читаешь конспект, то ты, мать его, читаешь, а не редактируешь общий doc.</li><li>Когда будешь готовиться, просто откроешь страницу или скачаешь pdf и ничто тебя не отвлечет. Да хоть на телефон! И все формулы будут отображаться корректно (я проверял).</li><li>Наконец-то ты разберешься с LaTeX и git.</li></ul><h2><a name='header-n74' class='md-header-anchor '></a>Хочешь присоединиться, но не знаешь, с чего начать?</h2><ol start='' ><li><p>Установи Typora и разберись с базовым синтаксисом markdown и <strong>горячими кнопками</strong> (их немного).</p></li><li><p>LaTeX наше все, так что над ним придется посидеть пару часиков, прежде чем начать вести коспект в реальном времени. Вот крутая ссылка-справочник, я ей всегда пользуюсь: <a href='https://en.wikibooks.org/wiki/LaTeX/Mathematics.' target='_blank' >https://en.wikibooks.org/wiki/LaTeX/Mathematics.</a></p><blockquote><p>Если ты не можешь найти математический символ или записать выражение в LaTeX, то это значит 2 вещи:</p><ol start='' ><li>Ты плохо ищешь.</li><li>Он есть.</li></ol></blockquote></li><li><p>Для тренеровки можешь попробовать записать те темы в Typora, которых пока нет еще в моем конспекте.</p></li></ol><p>Good luck! </p><p>&nbsp;</p><p>&nbsp;</p></div>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node show-fences-line-number'><h1><a name='header-n0' class='md-header-anchor '></a>logic4human</h1><ul><li><a href='chapter1.html'>Глава 1. Высказывания</a></li><li><a href='chapter2.html'>Глава 2. Логика первого порядка</a> </li><li><a href='chapter3.html'>Глава 3. Метод резолюций</a></li></ul><h1><a name='header-n14' class='md-header-anchor '></a>Read me!</h1><p>Какая проблема возникает из раза в раз во время сессии? Правильно! </p><blockquote><p>&quot;<strong>А где же взять нормальный конспект?</strong>&quot; </p></blockquote><p>Так давайте сделаем его сами!</p><p>Все знают, что с хорошим конспектом <strong>шансы сдать на &quot;5&quot;</strong> растут в геометрической прогрессии. Но есть ряд проблем:</p><ul><li>У тебя почерк как у курицы;</li><li>Пишешь как черепашка и не успеваешь ничего записывать;</li><li>Любишь поспать и редко ходишь в универ;</li><li>Есть более важные вещи, чем &quot;эта бесполезная лекция&quot;;</li><li>Не существует универсального учебника, по которому рассказывается предмет;</li></ul><p><del>Тогда мы идем к вам!</del> Если хотя бы что-то из этого про тебя, то у меня к тебе есть предложение. Давай вести <strong>этот</strong> конспект вместе! Ну, например, по очереди! Что мы в итоге получим:</p><ol start='' ><li><p>Нормально оформленный по всем канонам конспект.</p></li><li><p>Легкую подготовку к экзамену и <strong>коллоквиуму</strong>.</p></li><li><p>Не надо будет думать&quot;где чего почитать чтобы сдать&quot;.</p></li><li><p>Не нужно портить тетради и исписывать ручку.</p></li><li><p>Шанс подробнейшим образом разобраться в нескольких темах. </p></li><li><p>Скорость набора на компьютере намного выше, чем скорость письма в тетрадочке. Тем самым, тебе удастся записать даже больше, чем мог бы, используя ручку и бумагу!</p></li><li><p>Если прокачать свой скилл на этом предмете, то можно попробовать замутить что-то подобное по другим предметам. </p><p><img src='images/spongebob-squarepants.jpg' alt='spongebob-squarepants' /></p></li></ol><h2><a name='header-n58' class='md-header-anchor '></a>Как это работает</h2><p>Сам конспект я пишу оффлайн в специальной программе - <a href='typora.io'>typora</a>. Это супер-мега крутой и мощный <a href='https://ru.wikipedia.org/wiki/Markdown'>markdown</a> редактор. Он настолько крут, что там можно настраивать оформление страницы (темы), экспортировать в html и pdf, вставлять картинки, рисовать графики и диаграммы, строить автоматически оглавление и.... ПИСАТЬ МАТЕМАТИЧЕСКИЕ ФОРМУЛЫ. Да, там есть <a href='https://ru.wikipedia.org/wiki/TeX'>Tex</a>. В общем-то, у typora крутая документация на сайте, так что с ней можно ознакомиться. </p><p>Собственно, у меня есть репозиторий на <a href='https://github.com/Denchick/logic4humans'>github</a>, а этот сайтик висит на GitHub pages. В репозиторий  можно делать пул-реквесты. Именно будет организовано взаимодействие. Для тех, кого пугает github, свои записи можно мне скидывать в <a href='https://vk.com/denchickkk'>вк</a>, я их ручками добавлю (но лучше все-таки github).</p><h2><a name='header-n63' class='md-header-anchor '></a>Преимущества typora перед docs.google</h2><ul><li>Единый стиль оформления конспекта.</li><li>Никаких лишних кнопок - ничего не отвлекает.</li><li>Если ты читаешь конспект, то ты, мать его, читаешь, а не редактируешь общий doc.</li><li>Когда будешь готовиться, то просто откроешь страницу или скачаешь pdf и ничто тебя не отвлечет. Да хоть на телефоне! И все формулы будут отображаться корректно (я проверял).</li><li>Скорость закрузки просто космос, проблема зависшего google-дока на экзамене исчезнет.</li><li>Наконец-то ты разберешься с LaTeX и git.</li></ul><h2><a name='header-n80' class='md-header-anchor '></a>Хочешь присоединиться, но не знаешь, с чего начать?</h2><ol start='' ><li><p>Установи Typora и разберись с базовым синтаксисом markdown и <strong>горячими клавишами</strong> (их немного).</p></li><li><p>LaTeX наше всё, так что над ним придется посидеть пару часиков, прежде чем начать вести коспект в реальном времени. Вот крутая ссылка-справочник, я ей всегда пользуюсь: <a href='https://en.wikibooks.org/wiki/LaTeX/Mathematics' target='_blank' >https://en.wikibooks.org/wiki/LaTeX/Mathematics</a>.</p><blockquote><p>Если ты не можешь найти математический символ или записать выражение в LaTeX, то это значит 2 вещи:</p><ol start='' ><li>Ты плохо ищешь.</li><li>Он есть.</li></ol></blockquote></li><li><p>Для тренировки можешь попробовать записать те темы в Typora, которых пока нет еще в моем конспекте.</p></li></ol><p><strong>Решим проблему подготовки к экзаменам раз и навсегда! Это лишь маленький шаг в большое будущее!</strong></p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
 </body>
 </html>
