@@ -1,4 +1,4 @@
-# Логика для людей! [![label](C:\Users\Volkov\Desktop\logic4humans\images\label.png)](github.com/Denchick/logic4humans)
+# Логика для людей! [![label](images\label.png)](github.com/Denchick/logic4humans)
 
 > Александр Георгиевич Гейн, каф. алгебры и фундаментальной информатики. 
 >
