@@ -1,4 +1,4 @@
-# Логика для людей! [![label](images\label.png)](github.com/Denchick/logic4humans)
+# Логика для людей! [![label](images\label.png)](https://github.com/Denchick/logic4humans)
 
 > Александр Георгиевич Гейн, каф. алгебры и фундаментальной информатики. 
 >
@@ -9,6 +9,8 @@
 > - [А.П. Замятин - математическая логика](books/the_best_book_of_the_world.pdf)
 > - Ю.М. Важенин - множество, логика, автоматы
 > - В.Б. Репницкий, А. Я. Овсянников - основы мат логики
+> - [Лекции А. Г. Гейна](http://kadm.imkn.urfu.ru/pages.php?id=gein_lectures)
+> - [Вопросы к экзамену](books/vopr_mat_log_kn.pdf)
 
 - [Глава 1. Высказывания](chapter1.html)
 - [Глава 2. Логика первого порядка](chapter2.html) 
